@@ -24,7 +24,7 @@ export default () => {
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/ant-design/ant-design-pro',
+          href: 'https://github.com/zlzbt/managementSystem',
           blankTarget: true,
         },
         {

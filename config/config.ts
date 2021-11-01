@@ -46,6 +46,7 @@ export default defineConfig({
   title: false,
   ignoreMomentLocale: true,
   proxy: proxy[REACT_APP_ENV || 'dev'],
+  // manifest 用于指定应用的显示名称、图标、应用入口文件地址及需要使用的设备权限等信息。是扩展的配置文件，指明了扩展的各种信息。
   manifest: {
     basePath: '/',
   },
