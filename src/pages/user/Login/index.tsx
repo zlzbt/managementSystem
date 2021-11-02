@@ -1,10 +1,10 @@
 import {
-  AlipayCircleOutlined,
+  // AlipayCircleOutlined,
   LockOutlined,
   MobileOutlined,
-  TaobaoCircleOutlined,
+  // TaobaoCircleOutlined,
   UserOutlined,
-  WeiboCircleOutlined,
+  // WeiboCircleOutlined,
 } from '@ant-design/icons';
 import { Alert, message, Tabs } from 'antd';
 import React, { useState } from 'react';
@@ -50,6 +50,7 @@ const Login: React.FC = () => {
     try {
       // 登录
       const msg = await login({ ...values, type });
+      debugger
       if (msg.status === 'ok') {
         const defaultLoginSuccessMessage = intl.formatMessage({
           id: 'pages.login.success',
@@ -84,13 +85,12 @@ const Login: React.FC = () => {
       </div>
       <div className={styles.content}>
         <LoginForm
-          // logo={<img alt="logo" src="/logo.svg" />}
           title="welcome"
           subTitle={intl.formatMessage({ id: 'pages.layouts.userLayout.title' })}
           initialValues={{
             autoLogin: true,
           }}
-          actions={[
+          /* actions={[
             <FormattedMessage
               key="loginWith"
               id="pages.login.loginWith"
@@ -99,7 +99,7 @@ const Login: React.FC = () => {
             <AlipayCircleOutlined key="AlipayCircleOutlined" className={styles.icon} />,
             <TaobaoCircleOutlined key="TaobaoCircleOutlined" className={styles.icon} />,
             <WeiboCircleOutlined key="WeiboCircleOutlined" className={styles.icon} />,
-          ]}
+          ]} */
           onFinish={async (values) => {
             await handleSubmit(values as API.LoginParams);
           }}
