@@ -13,6 +13,7 @@ import { useIntl, history, FormattedMessage, SelectLang, useModel } from 'umi';
 import Footer from '@/components/Footer';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
+// import formateMapData from '../../../utils/format';
 
 import styles from './index.less';
 
@@ -33,6 +34,10 @@ const Login: React.FC = () => {
   const [userLoginState, setUserLoginState] = useState<API.LoginResult>({});
   const [type, setType] = useState<string>('account');
   const { initialState, setInitialState } = useModel('@@initialState');
+
+  /* const formateData = formateMapData();
+  console.log('formateData: ', formateData) */
+
 
   const intl = useIntl();
 
